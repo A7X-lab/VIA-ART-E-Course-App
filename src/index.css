@@ -1,0 +1,62 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.perspective-500 {
+  perspective: 500px;
+}
+
+.cube-face {
+  transform-style: preserve-3d;
+  animation: float 3s ease-in-out infinite;
+}
+
+.cube-face:nth-child(1) { transform: translateZ(16px); }
+.cube-face:nth-child(2) { transform: rotateY(180deg) translateZ(16px); }
+.cube-face:nth-child(3) { transform: rotateY(-90deg) translateZ(16px); }
+.cube-face:nth-child(4) { transform: rotateY(90deg) translateZ(16px); }
+.cube-face:nth-child(5) { transform: rotateX(-90deg) translateZ(16px); }
+.cube-face:nth-child(6) { transform: rotateX(90deg) translateZ(16px); }
+
+/* Custom black and white theme */
+.bg-custom-black {
+  background-color: #000000;
+}
+
+.bg-custom-dark-gray {
+  background-color: #1a1a1a;
+}
+
+.bg-custom-light-gray {
+  background-color: #2a2a2a;
+}
+
+.text-custom-white {
+  color: #ffffff;
+}
+
+.text-custom-light-gray {
+  color: #cccccc;
+}
+
+.hover-bg-custom-white:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
